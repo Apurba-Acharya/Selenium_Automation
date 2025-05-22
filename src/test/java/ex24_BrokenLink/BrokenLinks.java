@@ -24,7 +24,7 @@ public class BrokenLinks {
         options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://www.amazon.in/");
+        driver.get("http://www.deadlinkcity.com/");
         driver.manage().window().maximize();
 
         List<WebElement> links = driver.findElements(By.tagName("a"));
