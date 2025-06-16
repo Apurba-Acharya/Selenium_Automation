@@ -21,7 +21,7 @@ public class testCases {
         driver.quit();
         System.out.println("Testing_AfterTest");
     }
-    @Test(retryAnalyzer = RerunAulomationScript.class)
+    @Test(retryAnalyzer = RerunAutomationScript.class)
     public void testMethod(){
         String title = driver.getTitle();
         Assert.assertEquals(title, "OrangeHRM");

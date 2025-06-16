@@ -31,14 +31,14 @@ public class test28_new_window_popup {
             if (!h.equals(parent)){
                 driver.switchTo().window(h);
                 driver.manage().window().maximize();
-                driver.findElement(By.xpath("//div[@class=\"x92rtbv x10l6tqk x1tk7jg1 x1vjfegm\"]/div[@role=\"button\"]")).click();
+                driver.findElement(By.xpath("//div[@role=\"dialog\"]//div[@aria-label=\"Close\"]//i[@data-visualcompletion=\"css-img\"]")).click();
                 String s2 = driver.findElement(By.xpath("//div [@class=\"x1e56ztr x1xmf6yo\"]/span/h1")).getText();
                 System.out.println("New frame element: " + s2);
-                //driver.close();
+                driver.close();
             }
         }
         driver.switchTo().window(parent);
-        String main_page = driver.findElement(By.xpath("//h1[normalize-space()='Window popup Modal']")).getText();
+        String main_page = driver.getTitle();
         System.out.println("Parent page title: " + main_page);
     }
 }

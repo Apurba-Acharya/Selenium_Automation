@@ -21,19 +21,27 @@ public class test28_switchto_getWindowHandles_byArrayList_Important {
         driver.findElement(By.xpath("//a[@href=\"https://twitter.com/orangehrm?lang=en\"]/*[name()='svg']")).click();
         driver.findElement(By.xpath("//a[@href='https://www.youtube.com/c/OrangeHRMInc']//*[name()='svg']")).click();
 
-        String window = driver.getWindowHandle();
-        System.out.println("Parent window ID: " + window);
+        String parentWindow = driver.getWindowHandle();
+        System.out.println("Parent window ID: " + parentWindow);
 
-        Set <String> windows = driver.getWindowHandles();
-        List <String> tabs = new ArrayList<>(windows);
+        Set<String> windows = driver.getWindowHandles();
+        List<String> tabs = new ArrayList<>(windows);
 
-        for (String e : tabs){
-            String title = driver.switchTo().window(e).getCurrentUrl();
-            System.out.println(title);
-            if (title.contains("https://x.com/orangehrm?lang=en&mx=2")){
-                Thread.sleep(7000);
-                driver.close();
+        // Iterate through each tab and switch by URL
+        for (String handle : tabs) {
+            driver.switchTo().window(handle);
+            String currentUrl = driver.getCurrentUrl();
+            System.out.println("Found window with URL: " + currentUrl);
+
+            // Match Twitter tab and switch
+            if (currentUrl.contains("https://www.linkedin.com/company/orangehrm")) {
+                System.out.println("Switched to Twitter tab");
+                Thread.sleep(5000);
+                break;
             }
         }
+        driver.switchTo().window(parentWindow);
+        System.out.println("Returned to parent window");
+        driver.quit();
     }
 }

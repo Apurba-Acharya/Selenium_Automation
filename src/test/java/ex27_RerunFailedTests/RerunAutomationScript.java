@@ -3,7 +3,7 @@ package ex27_RerunFailedTests;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-public class RerunAulomationScript implements IRetryAnalyzer {
+public class RerunAutomationScript implements IRetryAnalyzer {
 
     private  int retryCount = 0;
     private static final int maxCount = 5;
@@ -16,5 +16,4 @@ public class RerunAulomationScript implements IRetryAnalyzer {
         }
         return false;
     }
-
 }
