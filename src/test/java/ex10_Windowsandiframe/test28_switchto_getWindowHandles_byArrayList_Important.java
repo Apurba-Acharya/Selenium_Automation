@@ -31,17 +31,17 @@ public class test28_switchto_getWindowHandles_byArrayList_Important {
         for (String handle : tabs) {
             driver.switchTo().window(handle);
             String currentUrl = driver.getCurrentUrl();
-            System.out.println("Found window with URL: " + currentUrl);
+            System.out.println("Found window with URLs: " + currentUrl);
 
             // Match Twitter tab and switch
-            if (currentUrl.contains("https://www.linkedin.com/company/orangehrm")) {
-                System.out.println("Switched to Twitter tab");
+            if (currentUrl.contains("https://x.com/orangehrm?lang=en")) {
+                System.out.println("Switched to you tube tab");
                 Thread.sleep(5000);
                 break;
             }
         }
         driver.switchTo().window(parentWindow);
         System.out.println("Returned to parent window");
-        driver.quit();
+        //driver.quit();
     }
 }

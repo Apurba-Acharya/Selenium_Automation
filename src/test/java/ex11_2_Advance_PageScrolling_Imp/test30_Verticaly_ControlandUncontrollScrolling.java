@@ -1,4 +1,4 @@
-package ex11_2_Actions_Advance_PageScrolling_Imp;
+package ex11_2_Advance_PageScrolling_Imp;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class test30_Actions_Verticaly_ControlandUncontrollScrolling {
+public class test30_Verticaly_ControlandUncontrollScrolling {
     @Test
     public void ControlScrolling() throws InterruptedException {
 
@@ -31,13 +31,14 @@ public class test30_Actions_Verticaly_ControlandUncontrollScrolling {
         js.executeScript("arguments[0].scrollIntoView(true);",element);
         driver.findElement(By.xpath("//a[normalize-space()='Scroll - horizontal']")).click();
         Thread.sleep(5000);
+        System.out.println("--------- Controlled Scroll Down using JS executer ---------");
 
         //ControlScrolling: Important
         Actions actions = new Actions(driver);
         WebElement targetelement  = driver.findElement(By.xpath("//a[normalize-space()='Ordering formatted dates (Luxon)']"));
         actions.scrollToElement(targetelement).perform();
 
-        System.out.println("--------- Controlled Scroll Down End !!! ---------");
+        System.out.println("--------- Controlled Scroll Down using actions class ---------");
 
         Thread.sleep(7000);
 
@@ -49,6 +50,6 @@ public class test30_Actions_Verticaly_ControlandUncontrollScrolling {
         cross.click();
 
         actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).build().perform();
-        System.out.println("--------- Uncontrolled Scroll Down End!!! ---------");
+        System.out.println("--------- Uncontrolled Scroll Down ---------");
     }
 }

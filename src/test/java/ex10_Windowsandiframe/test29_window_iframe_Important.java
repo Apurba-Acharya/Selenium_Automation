@@ -42,7 +42,6 @@ public class test29_window_iframe_Important {
                 driver.switchTo().frame("heatmap-iframe");
                 WebElement clickmap = driver.findElement(By.xpath("//div[@data-qa=\"liqokuxuba\"]"));
                 clickmap.click();
-
             }
         }
         driver.switchTo().window(parentwindow);

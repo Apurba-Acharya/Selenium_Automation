@@ -14,7 +14,7 @@ public class test31_Actions_FileUpload_DragDrop_P7 {
 //         Options.addArguments("--InPrivate");
 //
 ////        ChromeOptions Options = new ChromeOptions();
-////        Options.addArguments("--Ingognito");
+////        Options.addArguments("--Incognito");
         WebDriver driver = new EdgeDriver();
         driver.get("https://awesomeqa.com/selenium/upload.html");
         driver.manage().window().maximize();
