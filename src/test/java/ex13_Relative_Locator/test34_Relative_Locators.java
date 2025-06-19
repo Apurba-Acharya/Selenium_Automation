@@ -33,9 +33,7 @@ public class test34_Relative_Locators {
         driver.switchTo().frame("result");
 
         WebElement submit = driver.findElement(By.xpath("//form[@id=\"form\"]/button"));
-
         submit.click();
-
         WebElement element = driver.findElement(By.xpath("//input[@id='username']"));
         WebElement errorElement = driver.findElement(with(By.tagName("small")).below(element));
 

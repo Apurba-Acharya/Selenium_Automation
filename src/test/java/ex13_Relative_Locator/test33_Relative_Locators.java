@@ -21,7 +21,7 @@ public class test33_Relative_Locators {
         driver.manage().window().maximize();
 
         // toRightOf
-        //  LeftOf
+        // LeftOf
         // AboveOf
         // below
         // near

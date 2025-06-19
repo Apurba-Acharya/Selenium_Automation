@@ -21,11 +21,11 @@ public class test32_ScrollToLocation_ShadowRoot {
         JavascriptExecutor js =(JavascriptExecutor)driver;
 
         //scroll to defined location using js
-        WebElement form = driver.findElement(By.xpath("//p[contains(text(),'This is just an disableFieldHandling of shadom DOM, this form w')]"));
+        WebElement form = driver.findElement(By.xpath("//p[contains(text(),'This is just an example of shadom DOM')]"));
         js.executeScript("arguments[0].scrollIntoView(true);",form);
 
-        //handling of shadow root
-        // (script format: "return (Copy JS path);"
+        // handling of shadow root:
+        // Script format: WebElement element = (WebElement) js.executeScript( "return **Copy JS path;");
         WebElement element = (WebElement) js.executeScript(" return document.querySelector(\"#__next > section.mt-50 > div > div > div:nth-child(2) > shadow-signup-form\").shadowRoot.querySelector(\"div > form > div:nth-child(2) > div > input\") ;");
         element.sendKeys("ATB");
         WebElement submit = (WebElement) js.executeScript("return document.querySelector(\"#__next > section.mt-50 > div > div > div:nth-child(2) > shadow-signup-form\").shadowRoot.querySelector(\"div > form > div:nth-child(6) > div > button\") ;");
