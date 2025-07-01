@@ -5,13 +5,13 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
 
-public class P6 {
+public class P6_Close_Quit {
     @Test
     public void selenium01 () throws Exception {
         WebDriver driver = new EdgeDriver();
         driver.get("https://google.com/");
         Thread.sleep(3000);
         driver.close(); // Error - Invalid session Id
-        //driver.quit(); //  Error - Session ID is null
+        //driver.quit(); //  Error - Session Id is null
     }
 }

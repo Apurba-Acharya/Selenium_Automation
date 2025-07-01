@@ -15,7 +15,7 @@ public class P2_BootStrapDropdown {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://jquery-az.com/boots/demo.php?ex=63.0_2");
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.findElement(By.cssSelector(".multiselect-selected-text")).click();
 
         // Select single option from the dropdown:

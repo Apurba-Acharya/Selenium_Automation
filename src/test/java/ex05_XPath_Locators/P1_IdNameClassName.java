@@ -17,6 +17,8 @@ public class P1_IdNameClassName {
         WebDriver driver = new EdgeDriver(edgeOptions);
         driver.get("https://app.vwo.com");
 
+        // xPath locators: ID, Name, Class Name, Tag Name, Link Text, Partial Link Text, CSS Selector, XPath
+
         // 1. Find email input box
         // <input >> Open HTML tag
         // type="email"
