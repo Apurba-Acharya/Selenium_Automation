@@ -23,7 +23,6 @@ public class BrokenLinks {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("http://www.deadlinkcity.com/");
 
         List<WebElement> links = driver.findElements(By.tagName("a"));
