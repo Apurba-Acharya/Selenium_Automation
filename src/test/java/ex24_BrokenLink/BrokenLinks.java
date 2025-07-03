@@ -53,7 +53,7 @@ public class BrokenLinks {
 
                 if (conn.getResponseCode() >= 400) {
                     System.out.println(hrfattvalue + " > Broken link : " + conn.getResponseCode() + " :: " + conn.getResponseMessage());
-                    numberOfbrokenLinks++;
+                    numberOfbrokenLinks++; // Count of broken links
                 } else {
                     System.out.println(hrfattvalue + " > Not a broken link : " + conn.getResponseCode() + " :: " + conn.getResponseMessage());
                 }
