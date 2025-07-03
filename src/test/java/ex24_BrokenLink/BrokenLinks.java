@@ -25,7 +25,6 @@ public class BrokenLinks {
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("http://www.deadlinkcity.com/");
-        driver.manage().window().maximize();
 
         List<WebElement> links = driver.findElements(By.tagName("a"));
         System.out.println("Total Number of links: " + links.size());

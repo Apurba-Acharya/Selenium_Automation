@@ -29,7 +29,7 @@ public class Screenshots_handle {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
         //2. now copy the screenshot to desired location using copyfile method
-        FileUtils.copyFile(file, new File("C:\\Users\\apurb\\IdeaProjects\\Selenium_Automation\\src\\test\\java\\Take_Screenshots_handle" + fileName +".jpg"));
-        driver.quit();
+        FileUtils.copyFile(file, new File("C:\\Users\\apurb\\IdeaProjects\\Selenium_Automation\\src\\test\\java\\ex21_Take_Screenshots_handle\\screenShots" + fileName +".jpg"));
+        //driver.quit();
     }
 }

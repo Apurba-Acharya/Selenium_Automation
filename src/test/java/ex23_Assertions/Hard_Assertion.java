@@ -10,7 +10,12 @@ public class Hard_Assertion {
     public static void main(String[] args) {
         EdgeDriver driver = new EdgeDriver();
         driver.get("https://tutorialsninja.com/demo/");
-        driver.manage().window().maximize();
+
+//        Hard Assertions:
+//        1. Stops execution immediately when an assertion fails.
+//        2. Subsequent steps will not be executed.
+//        3. Typically used when the failure should block the test case.
+
         Assert.assertTrue(driver.getTitle().equals("XYZ"));
         WebElement element = driver.findElement(By.xpath("//input[@placeholder='Search']"));
         element.sendKeys("MacBook");

@@ -9,6 +9,10 @@ import org.testng.asserts.SoftAssert;
 public class Soft_Assertion {
     public static void main(String[] args) throws InterruptedException {
 
+//        Soft Assertions:
+//        1. Continues execution even if an assertion fails.
+//        2. Collects all failures and reports them at the end.
+
         SoftAssert soft = new SoftAssert();
 
         EdgeDriver driver = new EdgeDriver();
