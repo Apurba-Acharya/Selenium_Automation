@@ -1,4 +1,4 @@
-package ex05_XPath_Locators;
+package ex05_XPath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
