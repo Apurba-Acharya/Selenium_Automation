@@ -1,10 +1,7 @@
 package ex05_Locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,17 +15,31 @@ import java.util.List;
 public class P5_amazonXPathAxes {
     WebDriver driver;
 
+    //Before click wait element method:
+    public void clickWithDelay(WebElement element, int delayInSeconds) {
+        try {
+            Thread.sleep(delayInSeconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        element.click();
+    }
+
     @Test
     public void amazonXPath() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
-        WebDriver driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
         driver.get("https://www.amazon.in/");
+        driver.manage().window().maximize();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        SoftAssert soft = new SoftAssert();
+        //SoftAssert soft = new SoftAssert();
+        String brandName = "OPPO";
+
         try {
 
+            //Continue shopping button:
             WebElement continueBtn = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@class, 'a-button-inner')]//button")));
             if (continueBtn.getText().equalsIgnoreCase("Continue shopping")) {
                 continueBtn.click();
@@ -40,33 +51,55 @@ public class P5_amazonXPathAxes {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[text()='Search Amazon.in']/following-sibling::input"))).sendKeys("Phones");
             driver.findElement(By.xpath("//span[@aria-label='Go']/child::input")).click();
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@aria-label, 'See more, Brands')]"))).click();
 
-            List<WebElement> mobiles = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[contains(@id, 'brandsRefinements')]//*[contains(@role, 'presentation')]")));
-            boolean brandFound = false;
-            for (WebElement listMob : mobiles) {
-                if (listMob.getText().equalsIgnoreCase("CMF BY NOTHING")) {
-                    listMob.click();
-                    brandFound = true;
+        // Check if brand is in the initial list
+        List<WebElement> brands = driver.findElements(By.xpath("//div[@id='brandsRefinements']/descendant::span[2]/child::span/descendant::span[1]/child::a"));
+        boolean brandFound = false;
+        for (WebElement brand : brands) {
+            if (brand.getText().equalsIgnoreCase(brandName)) {
+                brand.click();
+                brandFound = true;
+                break;
+            }
+        }
+
+        // If brand not found, click "See more" and search again
+        if (!brandFound) {
+            WebElement seeMore = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@aria-label, \"Brands\")]/descendant::span[text()=\"See more\"]")));
+            seeMore.click();
+
+            // Wait for expanded list
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#brandsRefinements>ul>[role=\"presentation\"]>li>span>div>div>ul>span>li>span>a")));
+
+            List<WebElement> moreBrands = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='brandsRefinements']/descendant::li[8]/descendant::ul/descendant::a")));
+            for (WebElement brand : moreBrands) {
+                if (brand.getText().equalsIgnoreCase(brandName)) {
+                    brand.click();
                     break;
                 }
             }
-            if (!brandFound) {
-                System.out.println("Brand not found, continuing...");
-            }
+        }
 
         } catch (TimeoutException e) {
             System.out.println("Search or brand selection elements not found, skipping...");
         }
 
         //sortBy button:
-        driver.findElement(By.xpath("//span[@class=\"a-dropdown-container\"]/descendant::span[2]")).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class=\"a-dropdown-container\"]/descendant::span[2]"))).click();
         List<WebElement> sortBy = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy((By.cssSelector(".a-nostyle.a-list-link>li>a"))));
         for (WebElement sorted : sortBy){
-            String s = sorted.getText();
-            System.out.println(s);
-            if(sorted.getText().trim().equals("Newest Arrivals")){
+            if(sorted.getText().equalsIgnoreCase("Newest Arrivals")){
                 sorted.click();
+                break;
+            }
+        }
+
+        //List Of products:
+        List<WebElement> products = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[contains(@class, \"s-main-slot s-result-list s-search-results sg-row\")]/div[contains(@role, \"listitem\")]/descendant::h2")));
+        for (WebElement prdts : products){
+            if (prdts.getText().equalsIgnoreCase("OPPO K13x 5G 6000mAh and 45W SUPERVOOC Charger & AI (Sunset Peach, 128 GB) (6 GB RAM)")){
+                clickWithDelay(prdts, 5);
+                break;
             }
         }
 
