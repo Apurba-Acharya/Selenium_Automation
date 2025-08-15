@@ -14,7 +14,6 @@ import java.time.Duration;
 import java.util.List;
 
 public class P5_amazonXPathAxes {
-
     WebDriver driver;
 
     // Before click wait element method:
