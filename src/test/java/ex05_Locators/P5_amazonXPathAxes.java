@@ -118,8 +118,7 @@ public class P5_amazonXPathAxes {
         //Sign-in page:
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@id, \"email_login\")]"))).sendKeys("arpita6079@gmail.com");
         WebElement loginEmail = driver.findElement(By.xpath("//input[@type=\"submit\"]"));
-        loginEmail.click();
-        //clickWithDelay(loginEmail, 5);
+        clickWithDelay(loginEmail, 5);
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type*=\"password\"]"))).sendKeys("Arpita@6079");
         WebElement loginPass = driver.findElement(By.cssSelector("input[id*=\"signIn\"]"));
