@@ -14,6 +14,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class P5_amazonXPathAxes {
+
     WebDriver driver;
 
     // Before click wait element method:
@@ -108,5 +109,20 @@ public class P5_amazonXPathAxes {
         }
         String selProd = driver.findElement(By.xpath("//*[contains(@id, \"centerCol\")]/descendant::span[@id=\"productTitle\"]")).getText().trim();
         soft.assertEquals(selProd, prodC);
+
+        //Add-To-Cart button:
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@class, \"a-spacing-none a-padding\")]//descendant::input[contains(@id, \"add-to-cart-button\")]"))).click();
+        //Proceed to checkout button:
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@name, \"proceedToRetailCheckout\")]"))).click();
+
+        //Sign-in page:
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@id, \"email_login\")]"))).sendKeys("arpita6079@gmail.com");
+        WebElement loginEmail = driver.findElement(By.xpath("//input[@type=\"submit\"]"));
+        loginEmail.click();
+        //clickWithDelay(loginEmail, 5);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type*=\"password\"]"))).sendKeys("Arpita@6079");
+        WebElement loginPass = driver.findElement(By.cssSelector("input[id*=\"signIn\"]"));
+        clickWithDelay(loginPass, 5);
     }
 }
