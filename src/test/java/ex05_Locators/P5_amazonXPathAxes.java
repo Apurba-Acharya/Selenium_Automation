@@ -40,6 +40,9 @@ public class P5_amazonXPathAxes {
 
         String brandName = "OPPO";
         String prodC = "OPPO A5X 4G (Laser White, 4GB RAM, 128GB Storage) with Exchange Bonus or No Cost EMI";
+        String delivTo = "Delivering to Arpita Acharya";
+        String add = "5/28 Sri Vishnu Appartment ph 2, Brahmapur Shiv Mandir Road, KOLKATA, WEST BENGAL, 700096, India";
+        String payType = "Pay on delivery (Cash/Card)";
 
         try {
             // Continue shopping button:
@@ -123,5 +126,21 @@ public class P5_amazonXPathAxes {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type*=\"password\"]"))).sendKeys("Arpita@6079");
         WebElement loginPass = driver.findElement(By.cssSelector("input[id*=\"signIn\"]"));
         clickWithDelay(loginPass, 5);
+
+        //Payment page:
+        WebElement payment = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),\"Cash on Delivery\")][1]/ancestor::label/child::input")));
+        clickWithDelay(payment, 5);
+        WebElement usePayButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),\"Use this payment method\")]/preceding-sibling::input[contains(@data-testid, \"secondary\")]")));
+        clickWithDelay(usePayButton, 5);
+
+        //Address verify:
+        String dvlTo = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), \"Delivering\")]"))).getText().trim();
+        Assert.assertEquals(dvlTo, delivTo);
+        String addr = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@id, \"change-delivery-link\")]/descendant::span"))).getText().trim();
+        Assert.assertEquals(addr, add);
+
+        //Payment verify:
+        String payverify = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), \"Pay on delivery\")]"))).getText().trim();
+        Assert.assertEquals(payverify, payType);
     }
 }
