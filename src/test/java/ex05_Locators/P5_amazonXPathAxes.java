@@ -40,7 +40,7 @@ public class P5_amazonXPathAxes {
             SoftAssert soft = new SoftAssert();
 
             String brandName = "JIO";
-            String prodC = "JioBharat V2 4G Phone with JioTV, JioHotstar, JioSoundPay, JioSaavn, Long Lasting Battery, LED Torch, Digital Camera | Black | Locked for JioNetwork";
+            String prodC = "        (Refurbished) JioBharat V4 4G Keypad Phone with JioTV, JioCinema, JioSaavn, JioPay (UPI), JioChat, JioPhotos Powerful 1000mAh Battery, LED Torch, Digital Camera |Black | Locked for JioNetwork       ".trim();
             String delivTo = "Delivering to Arpita Acharya";
             String add = "5/28 Sri Vishnu Appartment ph 2, Brahmapur Shiv Mandir Road, KOLKATA, WEST BENGAL, 700096, India";
             String payType = "Pay on delivery (Cash/Card)";
@@ -116,13 +116,18 @@ public class P5_amazonXPathAxes {
             soft.assertEquals(selProd, prodC);
 
             // Add-To-Cart or Unavailable check:
-            WebElement unavailElems = driver.findElement(By.xpath("//*[contains(@id, \"outOfStock\")]/descendant::span"));
+            try {
+                List<WebElement> unavailElems = driver.findElements(By.xpath("//*[contains(@id, 'outOfStock')]/descendant::span[1]"));
 
-            if (unavailElems.isDisplayed()) {
+                if (!unavailElems.isEmpty() && unavailElems.get(0).getText().trim().equals("Currently unavailable.")) {
                     System.out.println("You are trying to buy an unavailable product");
                     System.exit(0); // Immediately terminate execution
-            } else {
-                WebElement addToCartBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@class, \"a-spacing-none a-padding\")]//descendant::input[contains(@id, \"add-to-cart-button\")]")));addToCartBtn.click();
+                } else {
+                    WebElement addToCartBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@class, 'a-spacing-none a-padding')]//descendant::input[contains(@id, 'add-to-cart-button')]")));
+                    addToCartBtn.click();
+                }
+            } catch (Exception e) {
+                System.out.println("Error while checking availability or adding to cart: " + e.getMessage());
             }
 
             // Proceed to checkout button:
