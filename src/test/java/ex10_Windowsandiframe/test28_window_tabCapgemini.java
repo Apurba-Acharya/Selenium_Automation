@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.util.Set;
 
-public class test28_window_tab {
+public class test28_window_tabCapgemini {
     @Test
     public void p4() throws InterruptedException {
 //         EdgeOptions Options = new EdgeOptions();

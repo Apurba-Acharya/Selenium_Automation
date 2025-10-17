@@ -7,7 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import java.util.List;
 
-public class ex03_Multiselect_Dropdown_CheckedUncheckedElements {
+public class ex03_Multiselect_Dropdown_CheckedUncheckedElementsCapgemini {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new EdgeDriver();
         driver.manage().window().maximize();

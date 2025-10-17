@@ -118,7 +118,6 @@ public class P5_amazonXPathAxes {
             // Add-To-Cart or Unavailable check:
             try {
                 List<WebElement> unavailElems = driver.findElements(By.xpath("//*[contains(@id, 'outOfStock')]/descendant::span[1]"));
-
                 if (!unavailElems.isEmpty() && unavailElems.get(0).getText().trim().equals("Currently unavailable.")) {
                     System.out.println("You are trying to buy an unavailable product");
                     System.exit(0); // Immediately terminate execution
@@ -138,7 +137,7 @@ public class P5_amazonXPathAxes {
             WebElement loginEmail = driver.findElement(By.xpath("//input[@type=\"submit\"]"));
             clickWithDelay(loginEmail, 5);
 
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type*=\"password\"]"))).sendKeys("Arpita@6079");
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type*=\"password\"]"))).sendKeys("ddljarun@123432111");
             WebElement loginPass = driver.findElement(By.cssSelector("input[id*=\"signIn\"]"));
             clickWithDelay(loginPass, 5);
 
