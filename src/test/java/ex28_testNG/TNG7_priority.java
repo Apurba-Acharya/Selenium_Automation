@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 public class TNG7_priority {
     // What is priority:
+    //why needs to use priority ? : If we not use priority TestNG will set the priority baased on assKey (alphabatically) value. To avoid them needs to use priority.
     // TestNG internally doesn't maintain the order of test case executio, so that's why prioritazation is required
     // what is the default value of priority? : 0
     // can we pass negative values to priority ? : Yes we can because priority can accept integer value. So, it can be -ve (2^31) to +ve(2^31-1)
@@ -34,7 +35,7 @@ public class TNG7_priority {
         System.out.println("SaveTheTicket");
     }
 
-    @Test(priority=6)
+    @Test(priority=5)
     public void LogOut(){
         System.out.println("LogOut");
     }
