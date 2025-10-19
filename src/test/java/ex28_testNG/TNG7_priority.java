@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class TNG7_priority {
     // What is priority:
-    //why needs to use priority ? : If we not use priority TestNG will set the priority baased on assKey (alphabatically) value. To avoid them needs to use priority.
+    // why needs to use priority ? : If we not use priority TestNG will set the priority baased on assKey (alphabatically) value. To avoid them needs to use priority.
     // how to define ? : using priority keyword
     // TestNG internally doesn't maintain the order of test case executio, so that's why prioritazation is required
     // what is the default value of priority? : 0
