@@ -3,7 +3,7 @@
 <suite name="Priority">
     <test name="priority">
         <classes>
-            <class name="ex28_testNG.TNG7_priority"/>
+            <class name="ex28_testNG.TNG7_Priority.TNG7_priority"/>
         </classes>
     </test>
 </suite>

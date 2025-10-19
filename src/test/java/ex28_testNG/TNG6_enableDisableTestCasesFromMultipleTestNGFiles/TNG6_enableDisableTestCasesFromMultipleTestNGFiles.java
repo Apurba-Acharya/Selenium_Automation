@@ -1,4 +1,4 @@
-package ex28_testNG;
+package ex28_testNG.TNG6_enableDisableTestCasesFromMultipleTestNGFiles;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

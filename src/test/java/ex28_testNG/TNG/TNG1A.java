@@ -1,4 +1,4 @@
-package ex28_testNG;
+package ex28_testNG.TNG;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

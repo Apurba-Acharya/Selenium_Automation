@@ -6,7 +6,7 @@
 <suite name="DemoSuite">
     <test name="OrangeHRMLogin">
         <classes>
-            <class name="ex28_testNG.TNG1B_TNGFileCreationStructure">
+            <class name="ex28_testNG.TNG.TNG1B_TNGFileCreationStructure">
                 <methods>
                     <include name="LaunchApp"/>
                     <include name="EnterLoginDetails"/>
@@ -17,7 +17,7 @@
     </test>
     <test name="OrangeHRMMyInfo">
         <classes>
-            <class name="ex28_testNG.TNG1B_TNGFileCreationStructure">
+            <class name="ex28_testNG.TNG.TNG1B_TNGFileCreationStructure">
                 <methods>
                     <include name="LaunchApp"/>
                     <include name="EnterLoginDetails"/>
@@ -29,7 +29,7 @@
     </test>
     <test name="TestGoogle">
         <classes>
-            <class name="ex28_testNG.TNG1A">
+            <class name="ex28_testNG.TNG.TNG1A">
                 <methods>
                     <include name="testgoogle"/>
                     <include name="testfaceBook"/>

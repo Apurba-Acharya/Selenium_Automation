@@ -1,4 +1,4 @@
-package ex28_testNG;
+package ex28_testNG.TNG5A_Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

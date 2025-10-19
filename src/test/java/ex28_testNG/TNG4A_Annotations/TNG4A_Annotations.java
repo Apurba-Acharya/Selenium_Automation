@@ -1,4 +1,4 @@
-package ex28_testNG;
+package ex28_testNG.TNG4A_Annotations;
 
 import org.testng.annotations.*;
 

@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/apurb/IdeaProjects/Selenium_Automation">
         <classes>
-            <class name="ex28_testNG.TNG4A_Annotations">
+            <class name="ex28_testNG.TNG4A_Annotations.TNG4A_Annotations">
                 <methods>
                     <include name="test1"/>
                     <include name="test2"/>

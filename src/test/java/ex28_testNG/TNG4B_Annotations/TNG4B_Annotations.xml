@@ -3,7 +3,7 @@
 <suite name="DemoSuite">
     <test name="OrangeHRMLogin">
         <classes>
-            <class name="ex28_testNG.TNG4B_Annotations">
+            <class name="ex28_testNG.TNG4B_Annotations.TNG4B_Annotations">
                 <methods>
                     <include name="LaunchApp"/>
                     <include name="EnterLoginDetails"/>
@@ -14,7 +14,7 @@
     </test>
     <test name="OrangeHRMMyInfo">
         <classes>
-            <class name="ex28_testNG.TNG4B_Annotations">
+            <class name="ex28_testNG.TNG4B_Annotations.TNG4B_Annotations">
                 <methods>
                     <include name="LaunchApp"/>
                     <include name="EnterLoginDetails"/>
