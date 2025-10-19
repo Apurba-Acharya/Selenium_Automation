@@ -19,7 +19,7 @@ public class TNG10B_ignoredMissingDependencies {
         trackingNumber= "ABC12YH";
     }
 
-    @Test(dependsOnMethods = {"CreateShipment"}, ignoreMissingDependencies = true) //ignoreMissingDependencies = true: If dependent method is missing/skipped/ignored then also CancelShipment will get execute.
+    @Test(dependsOnMethods = {"CreateShipment"}, ignoreMissingDependencies = true) //ignoreMissingDependencies = true: If dependent method is deleted/skipped/ignored then also CancelShipment will get execute.
     public void TrackShipment() throws Exception {
         if(trackingNumber!=null){
             System.out.println("TrackShipment");
