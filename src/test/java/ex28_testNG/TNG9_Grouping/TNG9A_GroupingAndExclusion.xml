@@ -7,8 +7,6 @@
                 <include name="smoke"/>
 <!--                Exclusion groups:-->
                 <exclude name="sanity"/>
-<!--                Meta groups: Groups of groups-->
-
             </run>
         </groups>
         <classes>
