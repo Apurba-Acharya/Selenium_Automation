@@ -13,9 +13,9 @@ public class TNG12A_dataProvider {
     // what is ?: this is a container which passes the test data to our test method.
     // why ?: To parameterized the data to test methods.
     // what will happen if we not use dataProvider with @Test?: If we have multiple data provider then to identify each data provider uniquly we needs to assign the name to dataProvider.
-    // what will happen if name="loginTestData" is not pass through @DataProvider: It will through java.lang.exception to provide a name="loginTestData". In case if we not passing any dataProvider name then we can use the method name as data provider
+    // what will happen if name="loginTestData" is not pass through @DataProvider: It will through java.lang.exception to provide a name="loginTestData". In case if we not passing any dataProvider name then we can use the method name as data provider.
 
-    @Test(dataProvider = "loginTestData") // we can use: dataProvider = "loginData1"
+    @Test(dataProvider = "loginTestData") // we can use: dataProvider = "loginData1" ---> method name
     public void testHRM(String username, String password){
         WebDriver driver = new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/");
