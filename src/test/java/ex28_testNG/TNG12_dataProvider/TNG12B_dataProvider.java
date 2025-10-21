@@ -13,9 +13,9 @@ import java.util.*;
 public class TNG12B_dataProvider {
     /* *Is it mandatory to return Pbject[][] (2D array) from the dataProvider?: It is not mandatory to written only object to 2D array from thar dataProvider.
     -> Other supported data type in dataProvider:
-    Object[]; Object[][] -> Multi dimensional array; Iterator<Object>; Iterator<Object[]>
-    whn we are using Object means any pre-defined/user-defined data types: String, Integer, Float etc.
-    why Object?: Because object is the super class of all the classes in Java */
+       Object[]; Object[][] -> Multi dimensional array; Iterator<Object>; Iterator<Object[]>
+    -> when we are using Object means any pre-defined/user-defined data types: String, Integer, Float etc.
+    -> why Object?: Because object is the super class of all the classes in Java */
 
     //ex- 1D String array:
     @Test(dataProvider = "dataProv1")
