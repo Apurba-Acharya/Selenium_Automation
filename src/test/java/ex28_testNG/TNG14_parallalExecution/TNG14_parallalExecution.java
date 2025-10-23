@@ -1,4 +1,4 @@
-package ex28_testNG.TNG12_dataProvider;
+package ex28_testNG.TNG14_parallalExecution;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,13 +9,8 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class TNG12A_dataProvider {
-    // what is ?: this is a container which passes the test data to our test method.
-    // why ?: To parameterized the data to test methods.
-    // what will happen if we not use dataProvider with @Test?: If we have multiple data provider then to identify each data provider uniquly we needs to assign the name to dataProvider.
-    // what will happen if name="loginTestData" is not pass through @DataProvider: It will through java.lang.exception to provide a name="loginTestData". In case if we not passing any dataProvider name then we can use the method name as data provider.
-
-    @Test(dataProvider = "loginTestData") // we can use: dataProvider = "loginData1" ---> method name
+public class TNG14_parallalExecution {
+    @Test(dataProvider = "loginData1") // we can use: dataProvider = "loginData1" ---> method name
     public void testHRM(String username, String password){
         WebDriver driver = new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/");
@@ -28,14 +23,28 @@ public class TNG12A_dataProvider {
         driver.quit();
     }
 
-    @DataProvider(name="loginTestData")
+    /* When we needs to parallay run all sets of data data in the application.
+     And If needs to sun a specific sets of data needs to run then we needs to configure testNG.xml */
+    @DataProvider(parallel = true)
     public Object[][] loginData1(){
-        Object[][] data= new Object[2][2];
+        Object[][] data= new Object[6][2];
         data[0][0]= "Admin";
         data[0][1]= "admin123";
 
         data[1][0]= "Admin";
         data[1][1]= "test123";
+
+        data[2][0]= "qa";
+        data[2][1]= "admin123";
+
+        data[3][0]= "stage";
+        data[3][1]= "test123";
+
+        data[4][0]= "prod";
+        data[4][1]= "admin123";
+
+        data[5][0]= "qaStage";
+        data[5][1]= "test123";
         return data;
     }
 }
