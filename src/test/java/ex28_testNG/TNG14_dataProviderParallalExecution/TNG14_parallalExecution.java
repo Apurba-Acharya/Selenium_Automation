@@ -1,4 +1,4 @@
-package ex28_testNG.TNG14_parallalExecution;
+package ex28_testNG.TNG14_dataProviderParallalExecution;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
