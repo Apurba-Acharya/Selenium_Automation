@@ -11,7 +11,7 @@ public class TNG19A_BaseTest {
     @BeforeTest
     public void setUp(){
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
