@@ -7,6 +7,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -23,6 +25,13 @@ public class TNG19A_BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+    }
+
+    @AfterMethod // Dependency Injection Concept: this also used to capture the screenshorts. Either we can use testNG listener or Dependency Injection Concept
+    public void screenshortCapture(ITestResult result){
+        if (result.getStatus()==ITestResult.FAILURE){
+            captureScreenshot(result.getTestContext().getName()+ "_" +result.getMethod().getMethodName()+".jpg");
+        }
     }
 
     @AfterTest

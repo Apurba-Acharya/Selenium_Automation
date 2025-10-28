@@ -1,7 +1,9 @@
-package ex28_testNG.TNG19_failedScreenshorts;
+package ex28_testNG.TNG20_ReportGenerateByTestNG_PENDING;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -10,14 +12,23 @@ import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
 
-public class TNG19A_screenshorts extends TNG19A_BaseTest {
+public class TNG20A_defaultReportGenerateByTestNG {
+    // what is reports: report is file whenever we close the editor, we are going to loose the last execution details info. So to keep the info. we needs reports
+    // TestNg can generate default report (test-output.xml) after each execution.
+
+    /* Course Pending:
+    1. Extend Report: https://youtube.com/playlist?list=PLacgMXFs7kl_fz0xHQyBdaFMK8SHBTTSO&si=eywTFxum1s7QVIiR
+    2. https://youtu.be/P9zZ35dgrxg?si=Tg8yzOHmu9ZjbR8K */
+
+
+    public static WebDriver driver=new ChromeDriver();
     @Test(testName = "TestGoogle")
     public void TestGoogle() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).sendKeys("HYR Tutorials", Keys.ENTER);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         boolean expecTitle = true;
-        boolean actualTitle = driver.getTitle().contains("xxYR+Tutorials");
+        boolean actualTitle = driver.getTitle().contains("HYR+Tutorials");
         assertEquals(actualTitle, expecTitle, "Title is mismatched");
     }
 
