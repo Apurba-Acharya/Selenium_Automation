@@ -1,0 +1,24 @@
+package ex29_OOPsConceptInJavaSeleniumFramework.Encapsulation;
+
+/* Encapsulation means wrapping data (variables) and methods together into a single class,
+and restricting direct access to those data members using private access modifiers — allowing control via
+public getter/setter methods. */
+
+public class BrowserConfig {
+
+    private String browserName;
+    private String driverPath;
+    public void setBrowserName(String browserName) {
+        this.browserName = browserName;
+    }
+    public void setDriverPath(String driverPath) {
+        this.driverPath = driverPath;
+    }
+    public String getBrowserName() {
+        return browserName;
+    }
+    public String getDriverPath() {
+        return driverPath;
+    }
+}
+
