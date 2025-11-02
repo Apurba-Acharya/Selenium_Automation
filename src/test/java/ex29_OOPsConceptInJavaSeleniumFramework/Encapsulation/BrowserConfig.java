@@ -6,7 +6,6 @@ public getter/setter methods. */
 
 public class BrowserConfig {
     private String browserName;
-    private String driverPath;
     private final String username = "Admin";
     private final String password = "admin123";
 
@@ -14,16 +13,8 @@ public class BrowserConfig {
         this.browserName = browserName;
     }
 
-    public void setDriverPath(String driverPath) {
-        this.driverPath = driverPath;
-    }
-
     public String getBrowserName() {
         return browserName;
-    }
-
-    public String getDriverPath() {
-        return driverPath;
     }
 
     public String getUsername() {
