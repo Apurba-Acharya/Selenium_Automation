@@ -12,7 +12,6 @@ import java.io.IOException;
 public class demo {
    static WebDriver driver;
 
-
     public static void scHand (String filename) throws IOException {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file, new File(""));

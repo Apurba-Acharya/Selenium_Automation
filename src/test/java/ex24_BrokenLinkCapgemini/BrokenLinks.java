@@ -16,7 +16,6 @@ import java.util.Set;
 
 // Broken link : Is a link which does not have any resource in the server.
 
-
 public class BrokenLinks {
     public static void main(String[] args) throws IOException {
         ChromeOptions options = new ChromeOptions();

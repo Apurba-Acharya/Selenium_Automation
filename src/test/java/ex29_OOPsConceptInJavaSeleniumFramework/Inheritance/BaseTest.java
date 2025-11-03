@@ -1,7 +1,7 @@
 package ex29_OOPsConceptInJavaSeleniumFramework.Inheritance;
 
 
-/*Inheritance means one class (child) can use the properties and methods of another class
+/*Inheritance means one child class can use the properties and methods of another class
   (parent) — without rewriting them. */
 
 import org.openqa.selenium.WebDriver;

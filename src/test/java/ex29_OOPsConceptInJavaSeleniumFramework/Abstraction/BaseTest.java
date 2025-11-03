@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-import java.time.Duration;
-
     /*Abstraction: Abstraction means showing only essential details and hiding the background logic.
     -> Selenium WebDriver itself uses abstraction through interfaces (like WebDriver, WebElement). */
 
