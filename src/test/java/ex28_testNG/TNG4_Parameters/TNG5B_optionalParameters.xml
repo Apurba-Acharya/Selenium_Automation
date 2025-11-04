@@ -10,7 +10,7 @@
         <!--    Class level parameter will execute set of parameters mentioned under that methods. It will not hamper other test methods-->
         <parameter name="browserName" value="edge"/>
         <classes>
-            <class name="ex28_testNG.TNG5B_optionalParameters.TNG5B_optionalParameters">
+            <class name="ex28_testNG.TNG4_Parameters.TNG5B_optionalParameters">
                 <methods>
                     <include name="LaunchApp"/>
                     <include name="EnterLoginDetails"/>
@@ -23,7 +23,7 @@
 <!--        <parameter name="browserName" value="chrome"/> : here we are not initializing the browser for : test name="OrangeHRMMyInfo" -->
 <!--            So, optionalParameter is comming into the picture-->
         <classes>
-            <class name="ex28_testNG.TNG5B_optionalParameters.TNG5B_optionalParameters">
+            <class name="ex28_testNG.TNG4_Parameters.TNG5B_optionalParameters">
                 <methods>
                     <include name="LaunchApp"/>
                     <include name="EnterLoginDetails"/>

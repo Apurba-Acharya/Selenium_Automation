@@ -24,7 +24,7 @@ public class testCases {
     @Test(retryAnalyzer = RerunAutomationScript.class)
     public void testMethod(){
         String title = driver.getTitle();
-        Assert.assertEquals(title, "OrangeHRM");
+        Assert.assertEquals(title, "rangeHRM");
         System.out.println("Testing_Test");
     }
 }

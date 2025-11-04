@@ -9,7 +9,7 @@ public class TNG8_ignoreTest1 {
     /*If we use @Ignore and Test(enabled=true) both then also that @Test method should be ignored
     because @Ignore is always highest priority */
 
-    @Test(enabled=false)    //enabled/disabled specific test method through @Test method level. My default it should be enabled.
+    @Test(enabled=false)    //enabled/disabled specific test method through @Test method level. ByDefault it should be enabled.
     public void test1(){
         System.out.println("Test1");
     }

@@ -19,6 +19,8 @@
         </classes>
     </test>
 
+<!--    If nothing is mentioned / enabled="true" both are same-->
+
     <test name="OrangeHRMMyInfo">
         <classes>
             <class name="ex28_testNG.TNG5_enableDisableTestCasesFromMultipleTestNGFiles.TNG6_enableDisableTestCasesFromMultipleTestNGFiles">
@@ -32,7 +34,7 @@
         </classes>
     </test>
 
-    <test name="TestGoogle/Facebook" enabled="false">
+    <test name="TestGoogle/Facebook" enabled="true">
         <classes>
             <class name="ex28_testNG.TNG5_enableDisableTestCasesFromMultipleTestNGFiles.TNG6_enableDisableTestCasesFromMultipleTestNGFiles">
                 <methods>

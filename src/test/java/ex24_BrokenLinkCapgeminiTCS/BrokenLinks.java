@@ -1,4 +1,4 @@
-package ex24_BrokenLinkCapgemini;
+package ex24_BrokenLinkCapgeminiTCS;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -38,7 +38,7 @@ public class BrokenLinks {
                 continue;
             }
 
-            if (!uniqueLinks.add(hrfattvalue)) {
+            if (!uniqueLinks.add(hrfattvalue)) { // uniqueLinks.add(hrfattvalue)==false -> Both are same. When this is false means that link is already present.
                 numberOfDuplicateLinks++; // Count the duplicate
                 continue;
             }
@@ -60,8 +60,8 @@ public class BrokenLinks {
             }
         }
 
-        System.out.println("Number of broken links : " + numberOfbrokenLinks);
-        System.out.println("Number of duplicate links skipped : " + numberOfDuplicateLinks);
+        System.out.println("Total No. of broken links : " + numberOfbrokenLinks);
+        System.out.println("Total No. duplicate links (skipped) : " + numberOfDuplicateLinks);
     }
 
 }
