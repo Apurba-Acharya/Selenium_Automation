@@ -3,8 +3,8 @@
 <suite name="Ignore">
     <test name="Test">
         <classes>
-            <class name="ex28_testNG.TNG7_Ignore.TNG8_ignoreTest1"/>
-            <class name="ex28_testNG.TNG7_Ignore.TNG8_ignoreTest2"/>
+            <class name="ex28_testNG.TNG7_Ignore_reLearn.TNG8_ignoreTest1"/>
+            <class name="ex28_testNG.TNG7_Ignore_reLearn.TNG8_ignoreTest2"/>
         </classes>
     </test>
 </suite>
