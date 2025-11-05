@@ -8,9 +8,9 @@ public class TNG9_groupingTest2 {
         System.out.println("functional_regression_sanity_Test5");
     }
 
-    @Test(groups = {"sanity", "smoke"})
+    @Test(groups = {"sanity"})
     public void test6(){
-        System.out.println("sanity_smoke_Test6");
+        System.out.println("sanity_Test6");
     }
 
     @Test(groups = {"regression"})

@@ -20,13 +20,13 @@ public class TNG9_groupingTest1 {
         System.out.println("smoke_sanity_Test2");
     }
 
-    @Test(groups = {"smoke","functional"})
+    @Test(groups = {"functional"})
     public void test3(){
-        System.out.println("smoke_functional_Test3");
+        System.out.println("functional_Test3");
     }
 
-    @Test(groups = {"functional", "regression"})
+    @Test(groups = {"functional", "regression", "smoke"})
     public void test4(){
-        System.out.println("functional_regression_Test4");
+        System.out.println("functional_regression_smoke_Test4");
     }
 }
