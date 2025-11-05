@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- thread-count="1" -> IllegalArgumentException
+     Parallel execution: When mentioned parallel="tests" and thread-count="value" this is called
+     parallel="tests" -> this is only acceptable in suit level. If we mentioned this at test level then it be not work.
+     **If we are not mentioned thread-count by default testNG will be considered as 5
+     -->
+
+<!--Example 2:-->
+<suite name="Suite2" parallel="classes" thread-count="2">
+<test name="Test1">
+    <classes>
+        <class name="ex28_testNG.TNG15_parallalExecution.TNG16A_parallalExecution1"/>
+        <class name="ex28_testNG.TNG15_parallalExecution.TNG16A_parallalExecution2"/>
+        <class name="ex28_testNG.TNG15_parallalExecution.TNG16A_parallalExecution3"/>
+    </classes>
+</test>
+
+<test name="Test2">
+    <classes>
+        <class name="ex28_testNG.TNG15_parallalExecution.TNG16A_parallalExecution4"/>
+    </classes>
+</test>
+</suite>

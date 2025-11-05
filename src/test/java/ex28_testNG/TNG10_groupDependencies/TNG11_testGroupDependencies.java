@@ -34,14 +34,14 @@ public class TNG11_testGroupDependencies {
         System.out.println("regression 6");
     }
 
-//    //Ex 1:
-//    @Test(dependsOnGroups = {"smoke"}, alwaysRun = true) //if there is any failure in groups still test0 will get execute
-//    public void test0(){
-//        System.out.println("main Test");
-//    }
 
-    @Test(dependsOnGroups = {"smoke", "sanity", "regression"}) //if there is any failure in groups still test0 will get execute
-    public void test0(){
-       System.out.println("main Test");
+    @Test(dependsOnGroups = {"smoke", "sanity", "regression"}, alwaysRun = true) //alwaysRun = true -> if there is any failure in groups still test0 will get execute
+    public void test00(){
+        System.out.println("main Test 00");
+    }
+
+    @Test(dependsOnGroups = {"smoke", "sanity", "regression"}) //if there is any failure in groups then test0 will not get execute
+    public void test01(){
+       System.out.println("main Test 01");
    }
 }

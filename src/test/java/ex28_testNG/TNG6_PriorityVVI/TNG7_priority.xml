@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Priority">
+    <test name="priority">
+        <classes>
+            <class name="ex28_testNG.TNG6_PriorityVVI.TNG7_priority"/>
+        </classes>
+    </test>
+</suite>

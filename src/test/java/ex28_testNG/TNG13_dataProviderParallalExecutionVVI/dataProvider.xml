@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--How to control threadCount?: In testNG.xml file we can configure it with "data-provider-thread-count"-->
+
+<suite name="Suite" data-provider-thread-count="2">
+    <test name="C:/Users/apurb/IdeaProjects/Selenium_Automation/src/test/java/ex28_testNG/TNG14_parallalExecution/TNG14_parallalExecution.java">
+        <classes>
+            <class name="ex28_testNG.TNG13_dataProviderParallalExecutionVVI.TNG14_parallalExecution"/>
+        </classes>
+    </test>
+</suite>

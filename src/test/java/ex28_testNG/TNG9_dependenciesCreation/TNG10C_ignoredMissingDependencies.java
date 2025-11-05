@@ -20,7 +20,7 @@ public class TNG10C_ignoredMissingDependencies {
         if(trackingNumber!=null){
             System.out.println("TrackShipment");
         }else{
-            throw new Exception("Invalid tracking number"); // Due to TrackShipment is skipped due to that tracking number also not getting store in = trackingNumber
+            throw new Exception("Invalid tracking number"); // Due to TrackShipment is skipped. so, tracking number also not getting store in = trackingNumber
         }
     }
 

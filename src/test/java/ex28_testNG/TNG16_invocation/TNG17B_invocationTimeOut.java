@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class TNG17B_invocationTimeOut {
 
-    // Invocation timeOut will restrict the entire invocation execution restriction time
+    // Invocation timeOut will restrict the entire invocation execution restriction time: ErrorMessage: org.testng.internal.thread.ThreadTimeoutException
 
     @Test(invocationCount = 3, invocationTimeOut = 10000)
     public void testmethod2() throws Exception {
@@ -24,5 +24,4 @@ public class TNG17B_invocationTimeOut {
         System.out.println("Email address: " + driver.findElement(By.id("user_value")).getText());
         driver.quit();
     }
-
 }
