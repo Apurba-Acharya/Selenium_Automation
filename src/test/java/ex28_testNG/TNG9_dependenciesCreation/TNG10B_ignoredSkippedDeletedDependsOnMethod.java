@@ -3,20 +3,19 @@ package ex28_testNG.TNG9_dependenciesCreation;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-public class TNG10A_shipment {
+public class TNG10B_ignoredSkippedDeletedDependsOnMethod {
 
-    /* Priority will simply ignore if we use priority with dependsOnMethods.
-    Because dependsOnMethods will internally recognize that which test case is dendeds on whome */
-    // what will happen if dependendent test got failed? : Then the remaining test will go to skip status
+    // * what will happen if dependent test got failed?: Then the remaining test will go to skip status
 
     static String trackingNumber= null;
 
-    @Ignore //If we ignored dependent method then remaining test case will get failed.
+    @Ignore //If we ignored/skipped/deleted, dependent method then remaining @Test methods will get failed.
     @Test()
     public void CreateShipment(){
-        System.out.println(5/0); //Dummy SOUT to failed this test case
-        System.out.println("CreateShipment");
         trackingNumber= "ABC12YH";
+        System.out.println(5/0); //Dummy SOUT failed the below @Test methods
+        System.out.println("CreateShipment");
+
     }
 
     @Test(dependsOnMethods = {"CreateShipment"}, alwaysRun = true) //alwaysRun = true: this test method will always run even if dependent methods got failed.

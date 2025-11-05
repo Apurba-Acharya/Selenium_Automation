@@ -3,7 +3,7 @@
 <suite name="Grouping">
     <groups>
         <run>
-<!--            Regular expression = *-->
+<!--            Regular expression = * -> It will execute all the groups which comes under "windows"-->
             <include name="windows.*"/>
         </run>
     </groups>

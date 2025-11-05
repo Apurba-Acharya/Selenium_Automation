@@ -15,7 +15,7 @@
                 <include name="regression"/>
             </define>
             <run>
-<!--                Meta groups: Groups of groups:-->
+<!--                Meta group / Groups of groups:-->
                 <include name="weeklyBuild"/>
             </run>
         </groups>
