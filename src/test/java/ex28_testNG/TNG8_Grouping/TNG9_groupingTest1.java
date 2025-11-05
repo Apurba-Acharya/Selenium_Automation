@@ -12,21 +12,21 @@ public class TNG9_groupingTest1 {
 
     @Test(groups = {"smoke"})
     public void test1(){
-        System.out.println("Test1");
+        System.out.println("smoke_Test1");
     }
 
     @Test(groups = {"smoke", "sanity"})
     public void test2(){
-        System.out.println("Test2");
+        System.out.println("smoke_sanity_Test2");
     }
 
     @Test(groups = {"smoke","functional"})
     public void test3(){
-        System.out.println("Test3");
+        System.out.println("smoke_functional_Test3");
     }
 
     @Test(groups = {"functional", "regression"})
     public void test4(){
-        System.out.println("Test4");
+        System.out.println("functional_regression_Test4");
     }
 }

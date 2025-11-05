@@ -3,7 +3,7 @@
 <suite name="Grouping">
     <test name="Test">
         <groups>
-            <!--Meta groups: Groups of groups: If I want to create daily build or weekly build virtually then define tag is required-->
+            <!--Meta groups / Groups of groups: If I want to create daily build or weekly build virtually then define tag is required-->
 <!--            Using define tag we can create Meta Groups-->
             <define name="dailyBuild">
                 <include name="sanity"/>
