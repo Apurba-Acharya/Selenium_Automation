@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DemoSuite">
+<!--    Suite level parameter will execute same set of parameters in all the methods attached with that suite.-->
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+    <parameter name="username" value="Admin"/>
+    <parameter name="password" value="admin123"/>
+    <parameter name="sleepTime" value="3"/>
+    <test name="OrangeHRMLogin">
+        <!--    Class level parameter will execute set of parameters mentioned under that methods. It will not hamper other test methods-->
+        <parameter name="browserName" value="edge"/>
+        <classes>
+            <class name="ex27_testNG.TNG4_Parameters.TNG5B_optionalParameters">
+                <methods>
+                    <include name="LaunchApp"/>
+                    <include name="EnterLoginDetails"/>
+                    <include name="VerifyMyInfo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="OrangeHRMMyInfo">
+<!--        <parameter name="browserName" value="chrome"/> : here we are not initializing the browser for : test name="OrangeHRMMyInfo" -->
+<!--            So, optionalParameter is comming into the picture-->
+        <classes>
+            <class name="ex27_testNG.TNG4_Parameters.TNG5B_optionalParameters">
+                <methods>
+                    <include name="LaunchApp"/>
+                    <include name="EnterLoginDetails"/>
+                    <include name="NavigateToMyInfo"/>
+                    <include name="VerifyMyInfo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
