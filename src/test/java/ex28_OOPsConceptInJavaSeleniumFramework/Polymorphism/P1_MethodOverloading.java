@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class MethodOverloading {
+public class P1_MethodOverloading {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.facebook.com");

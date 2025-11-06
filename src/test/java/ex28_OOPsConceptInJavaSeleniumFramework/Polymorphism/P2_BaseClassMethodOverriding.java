@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
-public class BaseClassMethodOverriding {
+public class P2_BaseClassMethodOverriding {
     WebDriver driver;
     public void openBrowser() throws InterruptedException {
         driver = new ChromeDriver();
@@ -21,7 +21,7 @@ public class BaseClassMethodOverriding {
     }
 }
 
-class TestBrowserMethodOverriding extends BaseClassMethodOverriding {
+class TestBrowserMethodOverriding extends P2_BaseClassMethodOverriding {
     @Override
     public void openBrowser() throws InterruptedException {
         EdgeOptions options = new EdgeOptions();
@@ -29,9 +29,5 @@ class TestBrowserMethodOverriding extends BaseClassMethodOverriding {
         driver = new EdgeDriver(options);
         driver.get("https://www.OrangeHRM.com");
         Thread.sleep(5000);
-    }
-    @Override
-    public void closeBrowser() {
-        driver.quit();
     }
 }
