@@ -1,4 +1,4 @@
-package ex10_Windowsandiframe;
+package ex10_MultipleWindowsaAndiframe;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package ex10_Windowsandiframe;
+package ex10_MultipleWindowsaAndiframe;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class test28_switchto_getWindowHandles_byArrayList_Important {
+public class test28_switchto_WindowHandles_MaintainOrder_Important {
     @Test
     public void window_popup_modal() throws InterruptedException {
         WebDriver driver = new EdgeDriver();
