@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class calender_1 {
+public class Calender {
     @Test
     public void calender () throws InterruptedException {
         WebDriver driver = new ChromeDriver();

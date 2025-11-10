@@ -11,7 +11,7 @@ import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
 
-public class TNG3_assertions {
+public class TNG3A_assertions {
     @Test
     public void testgoogle(){
 //        assertEquals

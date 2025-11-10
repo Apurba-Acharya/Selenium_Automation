@@ -1,4 +1,4 @@
-package ex23_Assertions;
+package ex27_testNG.TNG2_assertions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.asserts.SoftAssert;
 
-public class Soft_Assertion {
+public class TNG3D_SoftAssertion {
     public static void main(String[] args) throws InterruptedException {
 
 //        Soft Assertions:

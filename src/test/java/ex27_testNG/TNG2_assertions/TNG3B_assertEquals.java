@@ -1,4 +1,4 @@
-package ex23_Assertions;
+package ex27_testNG.TNG2_assertions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class assertEquals {
+public class TNG3B_assertEquals {
     @Test
     public void TestAssertions (){
         ChromeOptions options = new ChromeOptions();
