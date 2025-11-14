@@ -47,11 +47,11 @@ public class TNG12A_dataProvider {
         2 rows → 2 sets of test data.
         2 columns → username and password. */
 
-        data[0][0]= "Admin"; // -> 0th row; username
-        data[0][1]= "admin123"; // -> 0th row; password
+        data[0][0]= "Admin"; // -> 0th row=> key:username
+        data[0][1]= "admin123"; // -> 0th row=> value:password
 
-        data[1][0]= "Admin"; // -> 1st row; username
-        data[1][1]= "test123"; // -> 1st row; password
+        data[1][0]= "Admin"; // -> 1th row=> key:username
+        data[1][1]= "test123"; // -> 1th row=> value:password
         return data;
     }
 }
