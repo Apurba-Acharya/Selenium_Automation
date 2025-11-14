@@ -28,8 +28,10 @@ public class TNG3A_assertions {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(9));
         String expectedTitle = "https://www.google.com/search?q=JavaSelenium&sca_esv=06680e941bb4b5b6&source=hp&ei=TJPuaLDNDvqWnesP24jUiAY&iflsig=AOw8s4IAAAAAaO6hXC0izTdLjbTY0NLUlC884B6Kg83R&ved=0ahUKEwiwo9j4paSQAxV6S2cHHVsEFWEQ4dUDCBA&uact=5&oq=JavaSelenium&gs_lp=Egdnd3Mtd2l6IgxKYXZhU2VsZW5pdW1INFAAWC9wAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcAsgcAuAcAwgcAyAcA&sclient=gws-wiz&sei=TZPuaL2fF-SwwcsPs7TJgAQ";
         String actuslTitle = driver.getTitle();
-        assertEquals(actuslTitle, expectedTitle, "Test failed"); // Hard assertion: Is an asserion which thrown the exception immediately upon failure of assertion
-        // difference between hard and soft assertion: in hard if the assertion is failed the exception will through imediately || in soft if the assertion got failed it will not through the excetion imediately
+        assertEquals(actuslTitle, expectedTitle, "Test failed");
+        // Hard assertion: Is an assertion which thrown the exception immediately upon failure of assertion.
+        // difference between hard and soft assertion: in hard if the assertion is failed the exception will through immediately.
+        // In soft if the assertion got failed it will not through the exception imediately.
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(9));
         driver.quit();

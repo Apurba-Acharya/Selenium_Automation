@@ -6,7 +6,7 @@
     <parameter name="password" value="admin123"/>
     <parameter name="sleepTime" value="3"/>
 
-    <test name="OrangeHRMLogin" enabled="false">
+    <test name="DisabledTestSuite" enabled="false">
         <parameter name="browserName" value="edge"/>
         <classes>
             <class name="ex27_testNG.TNG5_enableDisableTestCasesFromMultipleTestNGFiles.TNG6_enableDisableTestCasesFromMultipleTestNGFiles">

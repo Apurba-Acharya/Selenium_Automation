@@ -27,6 +27,7 @@ public class TNG4B_Annotations {
         driver.quit();
         System.out.println("AfterTest : Executed");
     }
+
     @Test
     public void LaunchApp() {
         driver.get("https://opensource-demo.orangehrmlive.com/");

@@ -21,7 +21,7 @@
     </test>
     <test name="OrangeHRMMyInfo">
 <!--        <parameter name="browserName" value="chrome"/> : here we are not initializing the browser for : test name="OrangeHRMMyInfo" -->
-<!--            So, optionalParameter is comming into the picture-->
+<!--            So, optionalParameter is coming into the picture-->
         <classes>
             <class name="ex27_testNG.TNG4_Parameters.TNG5B_optionalParameters">
                 <methods>
