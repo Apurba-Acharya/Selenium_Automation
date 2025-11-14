@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class TNG12C_partiallyDataProvider {
     // indices?: Whatever the data you want to pass those data indexes is called as indices
-    // why use?: to pass the partial data to the test methos
+    // why use?: to pass the partial data to the test methods
     // how to pass?: indices is a parameter of data provider --> @DataProvider(indices = {0,2})
     // id we not use indices then all the value will be pass through test method.
 

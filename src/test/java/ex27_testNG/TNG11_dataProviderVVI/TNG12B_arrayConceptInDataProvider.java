@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import java.util.*;
 
-public class TNG12B_dataProvider {
+public class TNG12B_arrayConceptInDataProvider {
     /* *Is it mandatory to return Object[][] (2D array) from the dataProvider?: It is not mandatory to written only object to 2D array from that dataProvider.
     -> Other supported data type in dataProvider:
        Object[]; Object[][] -> Multi dimensional array; Iterator<Object>; Iterator<Object[]>
