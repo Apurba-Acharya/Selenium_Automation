@@ -1,4 +1,4 @@
-package ex27_testNG.TNG18_failedScreenshorts;
+package ex27_testNG.TNG18_failedScreenshorts.ITestListeners;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
@@ -20,6 +20,7 @@ import java.time.format.DateTimeFormatter;
 public class TNG19A_BaseTest {
     public static WebDriver driver;
     public static String screenshotsSubFolderName;
+
     @BeforeTest
     public void setUp(){
         WebDriverManager.chromedriver().setup();
@@ -27,7 +28,8 @@ public class TNG19A_BaseTest {
         driver.manage().window().maximize();
     }
 
-    @AfterMethod // Dependency Injection Concept: this also used to capture the screenshorts. Either we can use testNG listener or Dependency Injection Concept
+    @AfterMethod  // This method will execute after every test method.
+ // Dependency Injection Concept: this also used to capture the screenshorts. Either we can use testNG listener or Dependency Injection Concept
     public void screenshortCapture(ITestResult result){
         if (result.getStatus()==ITestResult.FAILURE){
             captureScreenshot(result.getTestContext().getName()+ "_" +result.getMethod().getMethodName()+".jpg");
@@ -39,7 +41,7 @@ public class TNG19A_BaseTest {
         driver.quit();
     }
 
-    public void captureScreenshot(String fileName) {
+    public void captureScreenshot(String fileName) { //This method will create a folder using dateAndTime stamp under screenShorts folder. Basically to avoid the duplication.
         if(screenshotsSubFolderName == null) {
             LocalDateTime myDateObj = LocalDateTime.now();
             DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss");

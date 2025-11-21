@@ -1,4 +1,4 @@
-package ex27_testNG.TNG18_failedScreenshorts;
+package ex27_testNG.TNG18_failedScreenshorts.ITestListeners;
 
 import org.testng.ITestListener;
 import org.testng.ITestResult;

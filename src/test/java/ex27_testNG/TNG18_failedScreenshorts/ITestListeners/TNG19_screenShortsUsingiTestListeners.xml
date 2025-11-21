@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
     <listeners>
-        <listener class-name="ex27_testNG.TNG18_failedScreenshorts.TNG19A_iTestListenerClass" />
+        <listener class-name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG19A_iTestListenerClass" />
     </listeners>
     <test name="Google">
         <classes>
-            <class name="ex27_testNG.TNG18_failedScreenshorts.TNG19A_screenshorts">
+            <class name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG19A_screenshorts">
                 <methods>
                     <include name="TestGoogle" />
                 </methods>
@@ -15,7 +15,7 @@
     </test> <!-- Test -->
     <test name="Facebook">
         <classes>
-            <class name="ex27_testNG.TNG18_failedScreenshorts.TNG19A_screenshorts">
+            <class name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG19A_screenshorts">
                 <methods>
                     <include name="TestFacebook" />
                 </methods>
@@ -24,7 +24,7 @@
     </test> <!-- Test -->
     <test name="OrangeHRM">
         <classes>
-            <class name="ex27_testNG.TNG18_failedScreenshorts.TNG19A_screenshorts">
+            <class name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG19A_screenshorts">
                 <methods>
                     <include name="TestOrangeHRM" />
                 </methods>

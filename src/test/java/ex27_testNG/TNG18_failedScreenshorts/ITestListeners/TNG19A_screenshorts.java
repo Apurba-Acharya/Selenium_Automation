@@ -1,4 +1,4 @@
-package ex27_testNG.TNG18_failedScreenshorts;
+package ex27_testNG.TNG18_failedScreenshorts.ITestListeners;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
