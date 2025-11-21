@@ -3,7 +3,7 @@
 <suite name="Suite">
     <test name="Google">
         <classes>
-            <class name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG19A_screenshorts">
+            <class name="ex27_testNG.TNG18_failedScreenshorts.DependencyInjection.TNG19A_screenshorts">
                 <methods>
                     <include name="TestGoogle" />
                 </methods>
@@ -12,7 +12,7 @@
     </test> <!-- Test -->
     <test name="Facebook">
         <classes>
-            <class name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG19A_screenshorts">
+            <class name="ex27_testNG.TNG18_failedScreenshorts.DependencyInjection.TNG19A_screenshorts">
                 <methods>
                     <include name="TestFacebook" />
                 </methods>
@@ -21,7 +21,7 @@
     </test> <!-- Test -->
     <test name="OrangeHRM">
         <classes>
-            <class name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG19A_screenshorts">
+            <class name="ex27_testNG.TNG18_failedScreenshorts.DependencyInjection.TNG19A_screenshorts">
                 <methods>
                     <include name="TestOrangeHRM" />
                 </methods>
