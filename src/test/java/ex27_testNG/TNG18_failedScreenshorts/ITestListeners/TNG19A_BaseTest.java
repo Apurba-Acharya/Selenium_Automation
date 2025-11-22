@@ -28,14 +28,6 @@ public class TNG19A_BaseTest {
         driver.manage().window().maximize();
     }
 
-    @AfterMethod  // This method will execute after every test method.
- // Dependency Injection Concept: this also used to capture the screenshorts. Either we can use testNG listener or Dependency Injection Concept
-    public void screenshortCapture(ITestResult result){
-        if (result.getStatus()==ITestResult.FAILURE){
-            captureScreenshot(result.getTestContext().getName()+ "_" +result.getMethod().getMethodName()+".jpg");
-        }
-    }
-
     @AfterTest
     public void tearDown(){
         driver.quit();
