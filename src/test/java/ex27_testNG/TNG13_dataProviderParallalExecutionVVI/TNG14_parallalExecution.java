@@ -32,7 +32,7 @@ public class TNG14_parallalExecution {
      And If it needs to sun a specific sets of data needs to run then we need to configure testNG.xml */
     @DataProvider(parallel = true)
     public Object[][] loginData1(){
-        Object[][] data= new Object[6][2];
+        Object[][] data= new Object[6][2]; // Rows: 6; Columns: 2
         data[0][0]= "Admin";
         data[0][1]= "admin123";
 

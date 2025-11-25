@@ -10,7 +10,7 @@ public class TNG17A_invocationCount {
 
     // Invocation count is a parameter/attribute which tells the test methods like how many number of times the same test methods should be invoked/executed.
     @Test(invocationCount = 3)
-    public void testmethod1() throws Exception {
+    public void testMethod1() throws Exception {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://randomuser.me/");

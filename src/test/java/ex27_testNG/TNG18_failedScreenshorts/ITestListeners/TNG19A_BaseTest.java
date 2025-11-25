@@ -23,7 +23,6 @@ public class TNG19A_BaseTest {
 
     @BeforeTest
     public void setUp(){
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
@@ -36,7 +35,7 @@ public class TNG19A_BaseTest {
     public void captureScreenshot(String fileName) { //This method will create a folder using dateAndTime stamp under screenShorts folder. Basically to avoid the duplication.
         if(screenshotsSubFolderName == null) {
             LocalDateTime myDateObj = LocalDateTime.now();
-            DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss");
+            DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss");
             screenshotsSubFolderName = myDateObj.format(myFormatObj);
         }
 
