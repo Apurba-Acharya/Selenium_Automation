@@ -8,6 +8,7 @@ import org.testng.annotations.DataProvider;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 
 
 public class TNG13A_excelDataSupllier {
@@ -16,11 +17,11 @@ public class TNG13A_excelDataSupllier {
     // WorkBook is 2 types: .xls->HSSF ; .xlsx->XSSF
 
     @DataProvider
-    public String [][] getData() throws IOException {
+    public Object [][] getData() throws IOException {
 
         //WorkBook configuration:
         File excelFile = new File("C:\\Users\\apurb\\IdeaProjects\\Selenium_Automation\\src\\test\\resources\\excelDataTNG.xlsx");
-        System.out.println(excelFile.exists());
+        System.out.println(excelFile.exists()); // Boolean return: exists or not
         FileInputStream fls = new FileInputStream(excelFile);
         XSSFWorkbook workBook = new XSSFWorkbook(fls);
 
@@ -31,7 +32,7 @@ public class TNG13A_excelDataSupllier {
         int noOfRows = sheet.getPhysicalNumberOfRows();
         int noOfColumns = sheet.getRow(0).getLastCellNum();
 
-        String [][] data = new String [noOfRows-1][noOfColumns]; // noOfRows-1 -> exclude header
+        Object [][] data = new Object [noOfRows-1][noOfColumns]; // noOfRows-1 -> exclude header
         for(int i=0; i<noOfRows-1; i++){
             for (int j=0; j<noOfColumns; j++){
                 DataFormatter df = new DataFormatter();
@@ -41,9 +42,9 @@ public class TNG13A_excelDataSupllier {
         workBook.close();
         fls.close();
 
-//        for(String [] dataArr : data){
-//            System.out.println(Arrays.toString(dataArr));
-//        }
+        for(Object [] dataArr : data){
+            System.out.println(Arrays.toString(dataArr));
+        }
         return data;
     }
 }
