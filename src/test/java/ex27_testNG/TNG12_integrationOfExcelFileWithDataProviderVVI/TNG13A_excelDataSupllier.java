@@ -30,21 +30,21 @@ public class TNG13A_excelDataSupllier {
         System.out.println(sheet.getPhysicalNumberOfRows());
         System.out.println(sheet.getLastRowNum()); // Excluding header row
         int noOfRows = sheet.getPhysicalNumberOfRows();
-        int noOfColumns = sheet.getRow(0).getLastCellNum();
+        int noOfColumns = sheet.getRow(0).getLastCellNum(); // Get how many columns (cells) are present in the first row.
 
         Object [][] data = new Object [noOfRows-1][noOfColumns]; // noOfRows-1 -> exclude header
         for(int i=0; i<noOfRows-1; i++){
             for (int j=0; j<noOfColumns; j++){
-                DataFormatter df = new DataFormatter();
-                data[i][j] = (df.formatCellValue(sheet.getRow(i+1).getCell(j)));;
+                DataFormatter df = new DataFormatter(); //DataFormatter -> converts any cell value to a formatted String exactly as it appears in Excel.
+                data[i][j] = (df.formatCellValue(sheet.getRow(i+1).getCell(j)));
             }
         }
         workBook.close();
         fls.close();
 
-        for(Object [] dataArr : data){
-            System.out.println(Arrays.toString(dataArr));
-        }
+//        for(Object [] dataArr : data){
+//            System.out.println(Arrays.toString(dataArr));
+//        }
         return data;
     }
 }
