@@ -11,7 +11,6 @@ public class TNG10C_ignoredMissingDependencies {
     @Test()
     public void CreateShipment(){
         trackingNumber= "ABC12YH";
-        System.out.println(5/0); //Dummy SOUT to failed this test case
         System.out.println("CreateShipment");
     }
 
@@ -20,7 +19,7 @@ public class TNG10C_ignoredMissingDependencies {
         if(trackingNumber!=null){
             System.out.println("TrackShipment");
         }else{
-            throw new Exception("Invalid tracking number"); // Due to TrackShipment is skipped. so, tracking number also not getting store in = trackingNumber
+            throw new Exception("Invalid tracking number"); // Due to TrackShipment is skipped(@Ignore). so, tracking number also not getting store in = trackingNumber
         }
     }
 
