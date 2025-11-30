@@ -3,6 +3,7 @@ package ex27_testNG.TNG18_failedScreenshorts.ITestListeners;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -10,7 +11,8 @@ import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
 
-public class TNG19A_screenshorts extends TNG19A_BaseTest {
+@Listeners(TNG18A_listenersClass.class)
+public class TNG18B_screenShorts extends TNG18A_listenersClass {
     @Test(testName = "TestGoogle")
     public void TestGoogle() throws Exception {
         driver.get("https://www.google.com/");

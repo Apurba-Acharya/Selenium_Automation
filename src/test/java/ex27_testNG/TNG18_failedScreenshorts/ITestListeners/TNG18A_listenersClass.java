@@ -1,14 +1,11 @@
 package ex27_testNG.TNG18_failedScreenshorts.ITestListeners;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
+import org.testng.*;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -17,10 +14,12 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class TNG19A_BaseTest {
+public class TNG18A_listenersClass implements ITestListener {
+
     public static WebDriver driver;
     public static String screenshotsSubFolderName;
 
+    // ================= BeforeTest & AfterTest ==================
     @BeforeTest
     public void setUp(){
         driver = new ChromeDriver();
@@ -32,8 +31,9 @@ public class TNG19A_BaseTest {
         driver.quit();
     }
 
+    // ================= Screenshot Utility ==================
     public void captureScreenshot(String fileName) { //This method will create a folder using dateAndTime stamp under screenShorts folder. Basically to avoid the duplication.
-        if(screenshotsSubFolderName == null) {
+        if (screenshotsSubFolderName == null) {
             LocalDateTime myDateObj = LocalDateTime.now();
             DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss");
             screenshotsSubFolderName = myDateObj.format(myFormatObj);
@@ -41,7 +41,8 @@ public class TNG19A_BaseTest {
 
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        File destFile = new File("./Screenshots/"+ screenshotsSubFolderName+"/"+fileName); // ./ => this is indicating the current project directory
+        File destFile = new File("./Screenshots/" + screenshotsSubFolderName + "/" + fileName); // ./ => this is indicating the current project directory
+
         try {
             FileUtils.copyFile(sourceFile, destFile);
         } catch (IOException e) {
@@ -49,4 +50,13 @@ public class TNG19A_BaseTest {
         }
         System.out.println("Screenshot saved successfully");
     }
+
+    // ================= ITestListener Methods ==================
+    @Override
+    public void onTestFailure(ITestResult result) {
+        String screenshotName = result.getTestContext().getName() + "_" + result.getMethod().getMethodName() + ".jpg";
+        System.out.println("Test Failed: Capturing Screenshot → " + screenshotName);
+        captureScreenshot(screenshotName);
+    }
 }
+

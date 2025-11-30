@@ -5,7 +5,7 @@
 -->
 
 <!--Example 2:-->
-<suite name="Suite2" parallel="classes" thread-count="2">
+<suite name="Parallel Execution 2" parallel="classes" thread-count="2">
 <test name="Test1">
     <classes>
         <class name="ex27_testNG.TNG15_parallalExecution.TNG16A_parallalExecution1"/>
