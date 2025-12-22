@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class HighlightElement_JSExecuter {
+public class HighlightElement_JSExecuter_TCS {
     @Test
     public void LoginpagewithHighlighter()
     {

@@ -1,5 +1,6 @@
 package ex27_testNG.TNG19_RerunFailedTests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -12,6 +13,7 @@ public class testCases {
 
     @BeforeTest()
     public void beforeTest(){
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         System.out.println(driver.getTitle());
