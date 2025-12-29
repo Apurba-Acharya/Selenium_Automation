@@ -12,7 +12,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 
 public class P2_BaseClassMethodOverriding {
     WebDriver driver;
-    public void openBrowser() throws InterruptedException {
+    public void openBrowser() throws InterruptedException { //parentClass method = openBrowser()
         driver = new ChromeDriver();
         driver.get("https://www.google.com");
     }
@@ -23,7 +23,7 @@ public class P2_BaseClassMethodOverriding {
 
 class TestBrowserMethodOverriding extends P2_BaseClassMethodOverriding {
     @Override
-    public void openBrowser() throws InterruptedException {
+    public void openBrowser() throws InterruptedException { //Using in childClass method = openBrowser()
         EdgeOptions options = new EdgeOptions();
         options.addArguments("-InPrivate");
         driver = new EdgeDriver(options);

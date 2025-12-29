@@ -16,7 +16,7 @@ public class TNG13A_excelDataSupllier {
     // Excel is a workBook which contains : Sheet -> Row -> Cell
     // WorkBook is 2 types: .xls->HSSF ; .xlsx->XSSF
 
-   /*                   | Method                      | Purpose
+    /*                   | Method                      | Purpose
             | --------------------------- | ----------------------------------- |
             |  getLastRowNum()            | Returns index of last row with data |
             |  getPhysicalNumberOfRows()  | Returns count of non-empty rows     | */
@@ -26,7 +26,7 @@ public class TNG13A_excelDataSupllier {
 
         //WorkBook configuration:
         File excelFile = new File("C:\\Users\\apurb\\IdeaProjects\\Selenium_Automation\\src\\test\\resources\\excelDataTNG.xlsx");
-        System.out.println(excelFile.exists()); // Boolean return: exists or not
+        System.out.println(excelFile.exists()); // Boolean return: True / False
         FileInputStream fis = new FileInputStream(excelFile);
         XSSFWorkbook workBook = new XSSFWorkbook(fis);
 
