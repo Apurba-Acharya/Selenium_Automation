@@ -21,7 +21,7 @@ public class P2_BaseClassMethodOverriding {
     }
 }
 
-class TestBrowserMethodOverriding extends P2_BaseClassMethodOverriding {
+class P2_BrowserMethodOverriding extends P2_BaseClassMethodOverriding {
     @Override
     public void openBrowser() throws InterruptedException { //Using in childClass method = openBrowser()
         EdgeOptions options = new EdgeOptions();
