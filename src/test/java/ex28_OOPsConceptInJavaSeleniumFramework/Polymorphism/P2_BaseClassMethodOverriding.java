@@ -1,8 +1,7 @@
 package ex28_OOPsConceptInJavaSeleniumFramework.Polymorphism;
 
-/* Method Overriding/Runtime Polymorphism/Late Binding/Dynamic Binding:
-        •Declaring a method in child class which already present in parent class.
-        •Subclass provides a new implantation for a method in superclass. */
+        /* Method Overriding/Runtime Polymorphism/Late Binding/Dynamic Binding:
+          Declaring a method in child class which already present in parent class. */
 
 
 import org.openqa.selenium.WebDriver;
