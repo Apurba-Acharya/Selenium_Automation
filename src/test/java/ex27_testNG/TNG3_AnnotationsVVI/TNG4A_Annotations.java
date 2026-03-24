@@ -4,16 +4,17 @@ import org.testng.annotations.*;
 
 public class TNG4A_Annotations {
     // Annotations example: @FindBy(id="username") WebElement usernameTxt;
-    //Annotation is form of metadata that can be added with java source code
+    // Annotation is a form of metadata that can be added with java source code
 
     /* Annotations available in testNG: @Test, @BeforeSuite, @AfterSuite, @BeforeClass,
-     @AfterClass, @BeforeMathod, @AfterMethod, @BeforeGroup, @AfterGroup, @dataProvider,
+     @AfterClass, @BeforeMethod, @AfterMethod, @BeforeGroup, @AfterGroup, @dataProvider,
      @Parameters, @Factory @Listeners, @Ignore etc. */
 
     @BeforeSuite
     public void beforeSuite() {
         System.out.println("1. @BeforeSuite → Executes before the entire test suite");
     }
+
     @AfterSuite
     public void afterSuite() {
         System.out.println("2. @AfterSuite → Executes after the entire test suite");
@@ -23,6 +24,7 @@ public class TNG4A_Annotations {
     public void beforeTest() {
         System.out.println("3. @BeforeTest → Executes before <test> tag in TNG4A_Annotations.xml");
     }
+
     @AfterTest
     public void afterTest() {
         System.out.println("4. @AfterTest → Executes after <test> tag in TNG4A_Annotations.xml");
@@ -32,6 +34,7 @@ public class TNG4A_Annotations {
     public void beforeClass() {
         System.out.println("5. @BeforeClass → Executes before the first @Test method in the current class");
     }
+
     @AfterClass
     public void afterClass() {
         System.out.println("6. @AfterClass → Executes after all @Test methods in the current class");
@@ -41,6 +44,7 @@ public class TNG4A_Annotations {
     public void beforeMethod() {
         System.out.println("7. @BeforeMethod → Executes before each @Test method");
     }
+
     @AfterMethod
     public void afterMethod() {
         System.out.println("8. @AfterMethod → Executes after each @Test method");

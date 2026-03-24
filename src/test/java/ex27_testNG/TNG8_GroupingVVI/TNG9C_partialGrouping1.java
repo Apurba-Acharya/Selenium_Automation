@@ -1,7 +1,5 @@
 package ex27_testNG.TNG8_GroupingVVI;
-
 import org.testng.annotations.Test;
-
 
 @Test(groups= {"all"})
 public class TNG9C_partialGrouping1 {

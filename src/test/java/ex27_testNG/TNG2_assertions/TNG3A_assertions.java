@@ -14,12 +14,12 @@ import static org.testng.Assert.assertEquals;
 public class TNG3A_assertions {
     @Test
     public void testgoogle(){
-//        assertEquals
-//        assertNotEquals
-//        assertTrue
-//        assertFalse
-//        assertNull
-//        assertNotNull
+        /* 1. assertEquals
+        2. assertNotEquals
+        3. assertTrue
+        4. assertFalse
+        5. assertNull
+        6. assertNotNull */
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.google.com/");
@@ -29,9 +29,9 @@ public class TNG3A_assertions {
         String expectedTitle = "https://www.google.com/search?q=JavaSelenium&sca_esv=06680e941bb4b5b6&source=hp&ei=TJPuaLDNDvqWnesP24jUiAY&iflsig=AOw8s4IAAAAAaO6hXC0izTdLjbTY0NLUlC884B6Kg83R&ved=0ahUKEwiwo9j4paSQAxV6S2cHHVsEFWEQ4dUDCBA&uact=5&oq=JavaSelenium&gs_lp=Egdnd3Mtd2l6IgxKYXZhU2VsZW5pdW1INFAAWC9wAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcAsgcAuAcAwgcAyAcA&sclient=gws-wiz&sei=TZPuaL2fF-SwwcsPs7TJgAQ";
         String actuslTitle = driver.getTitle();
         assertEquals(actuslTitle, expectedTitle, "Test failed");
-        // Hard assertion: Is an assertion which thrown the exception immediately upon failure of assertion.
-        // difference between hard and soft assertion: in hard if the assertion is failed the exception will through immediately.
-        // In soft if the assertion got failed it will not through the exception imediately.
+        /* 1. Hard assertion: Is an assertion which threw the exception immediately upon failure of assertion.
+           2. difference between hard and soft assertion: in hard if the assertion is failed, the exception will through immediately.
+           3. In soft if the assertion got failed, it will not through the exception immediately. */
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(9));
         driver.quit();
@@ -76,6 +76,6 @@ public class TNG3A_assertions {
         assertEquals(actualErrorMessage, expectedErrorMessage, "username error message is mismatched");
 
         driver.quit();
-        sa.assertAll(); // In soft assert if there are any failure then to through the assertion assertAll method will work at the end of the test execution.
+        sa.assertAll(); // In soft assert if there is any failure, then to through the assertion assertAll method will work at the end of the test execution.
     }
 }

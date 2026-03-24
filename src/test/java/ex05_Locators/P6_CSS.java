@@ -26,7 +26,7 @@ public class P6_CSS {
         driver.findElement(By.cssSelector("input.search_query.form-control.ac_input#search_query_top")).sendKeys("Shirt");
         Thread.sleep(1000);
 
-        // CSS 4: attribute equals
+        // CSS 4: attribute equals: tag[attribute='value']
         driver.get("http://www.automationpractice.pl/index.php");
         driver.findElement(By.cssSelector("a[class='login']")).click();
         Thread.sleep(1000);
@@ -36,7 +36,7 @@ public class P6_CSS {
         driver.findElement(By.cssSelector("input[id='search_query_top'][name='search_query']")).sendKeys("VSCode");
         Thread.sleep(1000);
 
-        // CSS 6: contains in attribute
+        // CSS 6: contains: tag[attribute*='value']
         driver.get("http://www.automationpractice.pl/index.php");
         driver.findElement(By.cssSelector("input[class*='search']")).sendKeys("DellTech");
         Thread.sleep(1000);
