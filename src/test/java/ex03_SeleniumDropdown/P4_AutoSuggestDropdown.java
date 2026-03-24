@@ -1,5 +1,6 @@
 package ex03_SeleniumDropdown;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ import java.util.List;
 public class P4_AutoSuggestDropdown {
     @Test
     public void autoSuggest() throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.google.com/");

@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 
 public class P1 {
+    WebDriver driver;
     @Test
     public void selenium01 (){
-        WebDriver driver;
         // 2  Do you want to run on Chrome then change to Edge ?
         driver = new ChromeDriver();
         driver = new EdgeDriver();// 97% -

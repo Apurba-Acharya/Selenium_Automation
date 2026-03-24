@@ -1,5 +1,6 @@
 package ex03_SeleniumDropdown;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,7 @@ import java.util.List;
 public class P3_HiddenDropdown {
     @Test
     public void dropdown () {
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php");
