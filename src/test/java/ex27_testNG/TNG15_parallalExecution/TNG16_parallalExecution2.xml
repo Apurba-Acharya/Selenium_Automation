@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- parallel="tests ::  Each `<test>` tag runs parallel
- parallel="classes :: Each class inside `<test>` runs parallel
+ parallel="tests :  Each <test> tag runs parallel. Where thread-count= number of tests runs in parallel
+
+ parallel="classes" : Each class inside <test> tag runs parallel. Where thread-count= number of classes runs in parallel
 -->
 
 <!--Example 2:-->
