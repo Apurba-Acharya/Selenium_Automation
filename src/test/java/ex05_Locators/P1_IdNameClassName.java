@@ -67,6 +67,8 @@ public class P1_IdNameClassName {
         WebElement error = driver.findElement(By.className("notification-box-description"));
         Assert.assertEquals(error.getText(),"Your email, password, IP address or location did not match");
 
+//        Dynamic Xpath: //div[@id="brandsRefinements"]//span[contains(text(), '"+brand+"')]
+
         Thread.sleep(5000);
         driver.quit();
     }

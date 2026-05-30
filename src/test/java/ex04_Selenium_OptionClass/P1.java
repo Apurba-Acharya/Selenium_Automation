@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 public class P1 {
     @Test
     public void selenium01 () throws InterruptedException {
+
         EdgeOptions edgeOptions = new EdgeOptions();
 //        edgeOptions.addArguments("--window-size=400,700");
         //edgeOptions.addArguments("--start maximized");

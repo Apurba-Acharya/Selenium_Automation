@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Grouping">
+<suite name="Groups Of Groups">
     <test name="Test">
         <groups>
             <!--Meta groups / Groups of groups: If I want to create daily build or weekly build virtually then define tag is required-->
@@ -15,7 +15,7 @@
                 <include name="regression"/>
             </define>
             <run>
-<!--                Meta group / Groups of groups:-->
+<!--                Meta group / Groups of groups: Include name is getting from defineName -->
                 <include name="weeklyBuild"/>
             </run>
         </groups>

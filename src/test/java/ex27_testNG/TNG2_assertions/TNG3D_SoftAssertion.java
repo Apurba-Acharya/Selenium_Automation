@@ -9,9 +9,9 @@ import org.testng.asserts.SoftAssert;
 public class TNG3D_SoftAssertion {
     public static void main(String[] args) throws InterruptedException {
 
-//        Soft Assertions:
-//        1. Continues execution even if an assertion fails.
-//        2. Collects all failures and reports them at the end.
+        /* Soft Assertions:
+        1. Continues execution even if an assertion fails.
+        2. Collects all failures and reports them at the end. */
 
         SoftAssert soft = new SoftAssert();
 
@@ -19,7 +19,7 @@ public class TNG3D_SoftAssertion {
         driver.get("https://tutorialsninja.com/demo/");
         driver.manage().window().maximize();
 
-        soft.assertTrue(driver.getTitle().equals("XYZ")); // SoftAssertions
+        soft.assertTrue(driver.getTitle().equals("XYZ"));
 
         WebElement element = driver.findElement(By.xpath("//input[@placeholder='Search']"));
         Thread.sleep(3000);

@@ -1,5 +1,6 @@
 package ex24_BrokenLinkCapgeminiTCS;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,7 @@ import java.util.Set;
 
 public class BrokenLinks {
     public static void main(String[] args) throws IOException {
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
@@ -37,7 +39,6 @@ public class BrokenLinks {
                 System.out.println("href attribute value is null or empty. Not possible to check");
                 continue;
             }
-
             if (!uniqueLinks.add(hrfattvalue)) { // uniqueLinks.add(hrfattvalue)==false -> Both are same. When this is false means that link is already present.
                 numberOfDuplicateLinks++; // Count the duplicate
                 continue;

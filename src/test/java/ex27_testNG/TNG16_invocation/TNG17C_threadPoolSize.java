@@ -11,7 +11,10 @@ public class TNG17C_threadPoolSize {
     // working is same as thread-count. threadPoolSize can work when invocationCount is provided.
     
     @Test(invocationCount = 4, threadPoolSize = 2)
-    public void testmethod4() throws Exception {
+//    invocationCount = 4 → Test method will run 4 times.
+//    threadPoolSize = 2 → At most 2 threads will run those invocations in parallel.
+
+    public void testMethod4() throws Exception {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://randomuser.me/");

@@ -1,8 +1,7 @@
 package ex28_OOPsConceptInJavaSeleniumFramework.Polymorphism;
 
-/* Method Overriding/Runtime Polymorphism/Late Binding/Dynamic Binding:
-        •Declaring a method in child class which already present in parent class.
-        •Subclass provides a new implantation for a method in superclass. */
+        /* Method Overriding/Runtime Polymorphism/Late Binding/Dynamic Binding:
+          Declaring a method in child class which already present in parent class. */
 
 
 import org.openqa.selenium.WebDriver;
@@ -12,7 +11,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 
 public class P2_BaseClassMethodOverriding {
     WebDriver driver;
-    public void openBrowser() throws InterruptedException {
+    public void openBrowser() throws InterruptedException { //parentClass method = openBrowser()
         driver = new ChromeDriver();
         driver.get("https://www.google.com");
     }
@@ -21,9 +20,9 @@ public class P2_BaseClassMethodOverriding {
     }
 }
 
-class TestBrowserMethodOverriding extends P2_BaseClassMethodOverriding {
+class P2_BrowserMethodOverriding extends P2_BaseClassMethodOverriding {
     @Override
-    public void openBrowser() throws InterruptedException {
+    public void openBrowser() throws InterruptedException { //Using in childClass method = openBrowser()
         EdgeOptions options = new EdgeOptions();
         options.addArguments("-InPrivate");
         driver = new EdgeDriver(options);

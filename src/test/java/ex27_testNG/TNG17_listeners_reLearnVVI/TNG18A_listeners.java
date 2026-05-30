@@ -12,7 +12,7 @@ public class TNG18A_listeners implements ITestListener {
          IInvokedMethodListener, IMethodInterceptor, IReporter, ISuiteListener, ITestListener etc.
      Difference between listeners and annotations:
         1. annotations are limited, and they are very clear as functionality wise.
-           listeners are not limited that will provide you different funtionalites
+           listeners are not limited that will provide you different functionality
         2. Listeners will listen the different type of event and annotations are limited */
 
     @Override

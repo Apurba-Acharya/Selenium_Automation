@@ -5,10 +5,12 @@
      Parallel execution: When mentioned parallel="tests" and thread-count="value" this is called Parallel execution
      parallel="tests" -> this is only acceptable in suite level. If we mentioned this at test level then it be not work.
      **If we are not mentioned thread-count by default testNG will be considered as 5
+
+     Important Clarification: Parallel = tests → runs classes in parallel, but inside each class, methods still run on the same thread.
      -->
 
 <!--example 1:-->
-<suite name="Suite" parallel="tests" thread-count="2">
+<suite name="Parallel Execution 1" parallel="tests" thread-count="2">
     <test name="Test 1">
         <classes>
             <class name="ex27_testNG.TNG15_parallalExecution.TNG16A_parallalExecution1"/>

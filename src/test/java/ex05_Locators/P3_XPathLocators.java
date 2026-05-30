@@ -13,10 +13,10 @@ public class P3_XPathLocators {
         driver.get("https://katalon-demo-cura.herokuapp.com/profile.php#login");
         driver.manage().window().maximize();
 
-        //name:
+        //id:
         driver.findElement(By.id("txt-username")).sendKeys("John Doe");
 
-        //id:
+        //name:
         driver.findElement(By.name("password")).sendKeys("ThisIsNotAPassword");
 
         //Using "and" operator:

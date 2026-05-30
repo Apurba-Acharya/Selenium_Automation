@@ -9,9 +9,10 @@ import org.testng.annotations.Test;
 public class TNG17B_invocationTimeOut {
 
     // Invocation timeOut will restrict the entire invocation execution restriction time: ErrorMessage: org.testng.internal.thread.ThreadTimeoutException
+    // sets a total time limit for all invocations combined, not per single invocation.
 
     @Test(invocationCount = 3, invocationTimeOut = 10000)
-    public void testmethod2() throws Exception {
+    public void testMethod2() throws Exception {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://randomuser.me/");

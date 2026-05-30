@@ -21,8 +21,8 @@ public class test33_Relative_Locators {
         driver.manage().window().maximize();
 
         // toRightOf
-        // LeftOf
-        // AboveOf
+        // toLeftOf
+        // above
         // below
         // near
         WebElement span_element = driver.findElement(By.xpath("//span[normalize-space()='Years of Experience']"));

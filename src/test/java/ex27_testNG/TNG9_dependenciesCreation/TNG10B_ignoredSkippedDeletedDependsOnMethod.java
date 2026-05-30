@@ -21,7 +21,7 @@ public class TNG10B_ignoredSkippedDeletedDependsOnMethod {
     @Test(dependsOnMethods = {"CreateShipment"}, alwaysRun = true) //alwaysRun = true: this test method will always run even if dependent methods got failed.
     public void TrackShipment() throws Exception {
         if(trackingNumber!=null){
-            System.out.println("TrackShipment");
+            System.out.println("TrackShipment: " + trackingNumber);
         }else{
             throw new Exception("Invalid tracking number");
         }

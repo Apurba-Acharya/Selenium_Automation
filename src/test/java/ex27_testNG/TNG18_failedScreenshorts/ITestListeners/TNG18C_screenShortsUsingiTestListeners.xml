@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners>
+        <listener class-name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG18A_listenersClass" />
+    </listeners>
+    <test name="Google">
+        <classes>
+            <class name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG18B_screenShorts">
+                <methods>
+                    <include name="TestGoogle" />
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Facebook">
+        <classes>
+            <class name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG18B_screenShorts">
+                <methods>
+                    <include name="TestFacebook" />
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="OrangeHRM">
+        <classes>
+            <class name="ex27_testNG.TNG18_failedScreenshorts.ITestListeners.TNG18B_screenShorts">
+                <methods>
+                    <include name="TestOrangeHRM" />
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

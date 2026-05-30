@@ -1,4 +1,4 @@
-package ex27_testNG.TNG18_failedScreenshorts;
+package ex27_testNG.TNG18_failedScreenshorts.DependencyInjection;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

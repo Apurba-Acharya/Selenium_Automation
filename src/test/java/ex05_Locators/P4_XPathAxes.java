@@ -66,7 +66,7 @@ public class P4_XPathAxes {
         // Ancestor
         driver.findElement(By.xpath("//div[@class=\"buttons\"]/ancestor::div"));
 
-        // Ancestor-or-self: It will include current element also.
+        // Ancestor-or-self: It will include the current element also.
         driver.findElement(By.xpath("//div[@class=\"buttons\"]/ancestor-or-self::div"));
 
         //Following:

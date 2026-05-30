@@ -8,23 +8,21 @@ public class TNG10A_dependesOnMethod {
     Because dependsOnMethods will internally recognize that which test case is depends on whome */
     // * what will happen if dependent test got failed?: Then the remaining test will go to skip status
 
-    static String trackingNumber= null;
+    public static String trackingNumber= null;
     @Test()
     public void CreateShipment(){
         trackingNumber= "ABC12YH";
         System.out.println(5/0); //Dummy SOUT failed the below @Test methods
         System.out.println("CreateShipment");
-
     }
 
     @Test(dependsOnMethods = {"CreateShipment"}, alwaysRun = true) //alwaysRun = true: this test method will always run even if dependent methods got failed.
     public void TrackShipment() throws Exception {
         if(trackingNumber!=null){
-            System.out.println("TrackShipment");
+            System.out.println("TrackShipment: " + trackingNumber);
         }else{
             throw new Exception("Invalid tracking number");
         }
-
     }
 
     @Test(dependsOnMethods = {"CreateShipment", "TrackShipment"})

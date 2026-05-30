@@ -1,7 +1,8 @@
-package ex10_MultipleWindowsaAndiframe;
+package ex10_MultipleWindowsAndiframe;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 

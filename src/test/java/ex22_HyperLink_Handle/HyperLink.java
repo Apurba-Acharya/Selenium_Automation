@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
     public void main() {
         EdgeDriver driver = new EdgeDriver();
         driver.get("https://omayo.blogspot.com/");
-        driver.findElement(By.linkText("testwisely")).click(); //Hperlink handled using LinkText.
+        driver.findElement(By.linkText("testwisely")).click(); //Hyperlink handled using LinkText.
 
         System.out.println("Link Text URL is: " + driver.getCurrentUrl());
         System.out.println("Title of Current URL: " + driver.getTitle());

@@ -1,4 +1,4 @@
-package ex10_MultipleWindowsaAndiframe;
+package ex10_MultipleWindowsAndiframe;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

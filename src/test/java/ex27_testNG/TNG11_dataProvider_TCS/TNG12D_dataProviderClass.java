@@ -1,4 +1,4 @@
-package ex27_testNG.TNG11_dataProviderVVI;
+package ex27_testNG.TNG11_dataProvider_TCS;
 
 import org.testng.annotations.DataProvider;
 
